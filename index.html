@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2232%22 fill=%22%235E3F31%22/%3E%3Ctext x=%2232%22 y=%2241%22 font-family=%22Georgia,serif%22 font-size=%2224%22 fill=%22%23FBF5EF%22 text-anchor=%22middle%22 letter-spacing=%222%22%3ESL%3C/text%3E%3C/svg%3E">
+<title>Sugar Lab</title>
+<meta name="description" content="SUGAR LAB — студия электроэпиляции в Екатеринбурге, ул. Луначарского, 133. Электроэпиляция, лазер, шугаринг, воск. Онлайн-запись.">
+<style>
+html,body{margin:0}
+@font-face{font-family:'Forum';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/forum-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Forum';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/forum-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Forum';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/forum-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/golos-text-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/golos-text-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/golos-text-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/golos-text-cyrillic-500-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/golos-text-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/golos-text-latin-ext-500-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/golos-text-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/golos-text-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Golos Text';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/golos-text-latin-ext-600-normal.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+/* Layout: светлая студийная страница по фото студии — фото крупно, текст по левому краю, строгая сетка, минимум декора */
+:root{
+  --bg:#FAF7F3; --paper:#FFFFFF; --sand:#EFE6DC; --line:#E4D9CF;
+  --ink:#2B211C; --muted:#76675E; --cocoa:#5E3F31; --on-cocoa:#FBF5EF; --ok:#46704A;
+  --f-logo:"Forum","Times New Roman",serif;
+  --f-body:"Golos Text","Segoe UI",system-ui,-apple-system,sans-serif;
+  --wrap:1180px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#171210; --paper:#201916; --sand:#2A211C; --line:#3A2F29;
+  --ink:#F2E9E2; --muted:#B4A398; --cocoa:#D8B89F; --on-cocoa:#1E1612; --ok:#8FC293; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#171210; --paper:#201916; --sand:#2A211C; --line:#3A2F29;
+  --ink:#F2E9E2; --muted:#B4A398; --cocoa:#D8B89F; --on-cocoa:#1E1612; --ok:#8FC293; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+@media (min-width:860px){body{padding-bottom:0}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-family:var(--f-logo);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:.005em}
+h1{font-size:clamp(40px,6.2vw,76px)}
+h2{font-size:clamp(32px,4.4vw,52px)}
+h3{font-size:26px}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(56px,8vw,112px)}
+.intro{display:grid;gap:14px;max-width:640px;margin-bottom:clamp(28px,4vw,48px)}
+.intro p{color:var(--muted);font-size:17px}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:4px;font:500 16px/1 var(--f-body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.btn-main{background:var(--cocoa);color:var(--on-cocoa)}
+.btn-main:hover{background:color-mix(in srgb,var(--cocoa) 86%,var(--ink))}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-line:hover{background:var(--ink);color:var(--bg)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--cocoa);outline-offset:3px}
+.link{color:var(--cocoa);font-weight:500;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:68px}
+.logo{font:400 25px/1 var(--f-logo);letter-spacing:.2em;text-decoration:none;white-space:nowrap;text-transform:uppercase}
+.nav{display:none;gap:26px;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+.top-right{margin-left:auto;display:flex;align-items:center;gap:18px}
+.top-phone{display:none;font-size:15px;font-weight:500;white-space:nowrap}
+.top .btn{min-height:42px;padding:0 18px;font-size:15px}
+@media (min-width:1000px){.nav{display:flex}.top-phone{display:block}}
+@media (max-width:420px){.top .btn{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(28px,5vw,64px) clamp(48px,7vw,88px)}
+.hero-grid{display:grid;gap:clamp(28px,5vw,64px);align-items:center}
+@media (min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr}}
+.hero .where{font-size:15px;color:var(--muted)}
+.hero h1{margin:14px 0 22px}
+.hero .sub{font-size:clamp(17px,1.7vw,20px);max-width:34em;color:var(--muted)}
+.hero .sub b{color:var(--ink);font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero-photo{position:relative;justify-self:center;width:100%;max-width:520px}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:2px}
+.hero-photo figcaption{font-size:13.5px;color:var(--muted);margin-top:10px}
+.stats{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:38px;padding-top:22px;border-top:1px solid var(--line)}
+.stats div{display:grid}
+.stats b{font:400 30px/1.1 var(--f-logo)}
+.stats span{font-size:14px;color:var(--muted)}
+
+/* offers band */
+.band{background:var(--sand)}
+.band .wrap{display:grid;gap:0;padding-block:0}
+@media (min-width:760px){.band .wrap{grid-template-columns:1fr 1fr}}
+.offer{display:flex;gap:20px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line)}
+.offer:last-child{border-bottom:0}
+@media (min-width:760px){.offer{border-bottom:0;padding:30px 28px 30px 0}.offer + .offer{border-left:1px solid var(--line);padding-left:28px}}
+.offer b{font:400 34px/1 var(--f-logo);white-space:nowrap}
+.offer p{font-size:15px;color:var(--muted)}
+.offer p strong{color:var(--ink);font-weight:500;display:block;font-size:16px;margin-bottom:2px}
+
+/* methods table */
+.methods{overflow-x:auto;border-top:1px solid var(--ink)}
+.methods table{width:100%;min-width:640px;border-collapse:collapse}
+.methods th,.methods td{padding:16px 18px 16px 0;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);font-size:15.5px}
+.methods thead th{font:400 26px/1.1 var(--f-logo);padding-top:20px}
+.methods thead th span{display:block;font:400 14px var(--f-body);color:var(--muted);margin-top:6px}
+.methods tbody th{font-weight:500;color:var(--muted);width:22%}
+.methods td.best{color:var(--ink)}
+.methods td .y{color:var(--ok);font-weight:500}
+.methods tfoot td{border-bottom:0;padding-top:18px}
+
+/* body map */
+.zones{display:grid;gap:clamp(24px,4vw,56px);align-items:start}
+@media (min-width:900px){.zones{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.bm-stage{display:flex;flex-direction:column;align-items:center;gap:14px;min-width:0;background:var(--paper);border:1px solid var(--line);padding:20px 12px 12px}
+.bm-stage svg{width:100%;max-width:520px;height:auto;display:block;overflow:visible}
+.view-toggle{display:inline-flex;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.view-toggle button{border:0;background:transparent;color:var(--muted);font:500 14px var(--f-body);padding:9px 20px;cursor:pointer}
+.view-toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+#figure{transition:opacity .25s}
+#figure.swap{opacity:0}
+.zfill{fill:var(--cocoa);opacity:.32;transition:opacity .3s}
+.hs{cursor:pointer;outline:none}
+.hs .hit{fill:transparent}
+.hs .dot{fill:var(--paper);stroke:var(--cocoa);stroke-width:3;transition:fill .2s}
+.hs .lead{stroke:var(--line);stroke-width:1.5;transition:stroke .2s}
+.hs text{font:500 21px var(--f-body);fill:var(--muted);transition:fill .2s}
+.hs:hover text,.hs:focus-visible text{fill:var(--ink)}
+.hs:focus-visible .dot{stroke-width:5}
+.hs.on .dot{fill:var(--cocoa)}
+.hs.on .lead{stroke:var(--cocoa)}
+.hs.on text{fill:var(--ink);font-weight:600}
+@media (max-width:520px){.hs text{font-size:30px}}
+.bm-hint{font-size:13.5px;color:var(--muted);text-align:center}
+.zpanel{min-width:0}
+.zpanel .zname{font:400 clamp(30px,3.6vw,44px)/1.1 var(--f-logo)}
+.zpanel .zsub{color:var(--muted);font-size:15.5px;margin:10px 0 18px;max-width:34em}
+.zlist{border-top:1px solid var(--ink)}
+.zrow{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:15px 0;border-bottom:1px solid var(--line)}
+.zrow b{font-weight:500}
+.zrow .p{text-align:right;white-space:nowrap;font-weight:500;font-variant-numeric:tabular-nums}
+.zrow small{grid-column:1/-1;color:var(--muted);font-size:13.5px}
+.zrow .first{color:var(--ok);font-size:13.5px;font-weight:500;display:block}
+.zrow.top b::after{content:"навсегда";margin-left:10px;font-size:12px;font-weight:500;color:var(--ok);border:1px solid currentColor;border-radius:3px;padding:1px 6px;vertical-align:2px}
+.zpanel .btn{margin-top:22px}
+.zpanel.fade{animation:zf .35s ease both}
+@keyframes zf{from{opacity:.2;transform:translateY(6px)}}
+
+/* result */
+.result-grid{display:grid;gap:clamp(24px,4vw,48px)}
+@media (min-width:900px){.result-grid{grid-template-columns:1fr 1fr;align-items:start}}
+.photos2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.photos2 figure{margin:0}
+.photos2 img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px}
+.photos2 figcaption{font-size:13.5px;color:var(--muted);margin-top:8px}
+.steps{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:0;border-top:1px solid var(--line)}
+.steps li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.steps li b{font-weight:500}
+.steps li p{color:var(--muted);font-size:15px}
+@media (max-width:480px){.steps li{grid-template-columns:1fr;gap:4px}}
+.note{margin-top:22px;font-size:15px;color:var(--muted);max-width:36em}
+
+/* prices */
+.prices-wrap{background:var(--paper);border-block:1px solid var(--line)}
+.tabs{display:flex;gap:28px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line);margin-bottom:6px}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;background:none;border:0;padding:12px 0;font:500 16px var(--f-body);color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .2s,border-color .2s}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--cocoa)}
+.price-note{padding:16px 0;font-size:15px;color:var(--muted);max-width:52em}
+.price-note b{color:var(--ink);font-weight:500}
+.table-scroll{overflow-x:auto}
+.ptable{width:100%;border-collapse:collapse;font-size:16px}
+.ptable th,.ptable td{text-align:left;padding:13px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.ptable th{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.02em}
+.ptable .p{text-align:right;white-space:nowrap;padding-left:24px;font-variant-numeric:tabular-nums}
+.ptable td.p{font-weight:500}
+.ptable td.first{color:var(--ok)}
+.ptable .d{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+.prices-foot{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:26px;font-size:14px;color:var(--muted)}
+
+.calc{margin-top:34px;padding:24px;border:1px solid var(--line);background:var(--bg);display:grid;gap:18px}
+@media (min-width:860px){.calc{grid-template-columns:1.3fr 1fr;align-items:end}}
+.calc h3{font-size:24px;margin-bottom:6px}
+.calc-fields{display:grid;gap:14px}
+.calc-row{display:flex;justify-content:space-between;gap:12px;font-size:15px}
+input[type=range]{width:100%;accent-color:var(--cocoa);height:26px;margin:0}
+.calc select{font:inherit;font-size:15px;padding:10px 12px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:4px;width:100%}
+.calc-out{display:grid;gap:4px}
+.calc-out b{font:400 46px/1 var(--f-logo)}
+.calc-out small{font-size:13.5px;color:var(--muted);line-height:1.45}
+
+/* team */
+.team-grid{display:grid;gap:clamp(24px,4vw,56px)}
+@media (min-width:900px){.team-grid{grid-template-columns:.85fr 1.15fr;align-items:start}}
+.team-photo img{width:100%;aspect-ratio:684/800;object-fit:cover;border-radius:2px}
+.team-photo figcaption{font-size:13.5px;color:var(--muted);margin-top:10px}
+.masters{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.masters li{display:grid;grid-template-columns:1fr auto;gap:6px 20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.masters h3{font-size:28px}
+.masters .tier{font-size:14px;color:var(--cocoa);font-weight:500}
+.masters p{grid-column:1/-1;color:var(--muted);font-size:15px;max-width:40em}
+.masters .rev{text-align:right;font-size:14px;color:var(--muted);white-space:nowrap}
+.masters .rev a{display:block;margin-top:4px}
+.quotes{display:grid;gap:22px;margin-top:40px}
+@media (min-width:760px){.quotes{grid-template-columns:repeat(3,1fr)}}
+.quotes figure{margin:0;padding-top:18px;border-top:1px solid var(--line)}
+.quotes blockquote{margin:0;font:400 21px/1.4 var(--f-logo)}
+.quotes figcaption{font-size:13.5px;color:var(--muted);margin-top:10px}
+
+/* gallery */
+.gallery{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media (min-width:860px){.gallery{grid-template-columns:1.2fr 1fr 1fr}}
+.gallery figure{margin:0;overflow:hidden}
+.gallery img{width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.gallery figure:hover img{transform:scale(1.03)}
+.gallery figure:first-child{grid-column:1/-1}
+@media (min-width:860px){.gallery figure:first-child{grid-column:auto}}
+
+/* school */
+.school-grid{display:grid;gap:clamp(24px,4vw,56px)}
+@media (min-width:900px){.school-grid{grid-template-columns:1fr 1fr}}
+.block h3{margin-bottom:10px}
+.block > p{color:var(--muted);font-size:15.5px;max-width:34em}
+.rows{margin-top:18px;border-top:1px solid var(--line)}
+.rows div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.rows div span:last-child{font-weight:500;font-variant-numeric:tabular-nums;text-align:right}
+.rows div span:first-child{white-space:nowrap}
+.block{min-width:0}
+.rows small{display:block;color:var(--muted);font-size:13.5px}
+.block .btn{margin-top:22px}
+.school-photo img{width:100%;aspect-ratio:16/11;object-fit:cover;object-position:50% 35%;border-radius:2px;margin-bottom:22px}
+
+/* faq */
+.faq{max-width:820px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:20px 0;font-size:18px;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 26px/1 var(--f-logo);color:var(--cocoa);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--muted);max-width:42em}
+
+/* contacts */
+.contacts{background:var(--cocoa);color:var(--on-cocoa)}
+.contacts .muted,.contacts .intro p{color:color-mix(in srgb,var(--on-cocoa) 72%,transparent)}
+.c-grid{display:grid;gap:32px}
+@media (min-width:900px){.c-grid{grid-template-columns:1fr 1fr 1fr}}
+.c-item{display:grid;gap:6px;align-content:start;padding-top:18px;border-top:1px solid color-mix(in srgb,var(--on-cocoa) 30%,transparent)}
+.c-item small{font-size:14px;opacity:.75}
+.c-item .big{font:400 26px/1.25 var(--f-logo)}
+.copy{justify-self:start;margin-top:6px;background:none;border:1px solid color-mix(in srgb,var(--on-cocoa) 45%,transparent);color:var(--on-cocoa);font:500 13px var(--f-body);padding:7px 12px;border-radius:4px;cursor:pointer}
+.copy:hover{border-color:var(--on-cocoa)}
+.c-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:6px;font-size:15px}
+.c-links a{text-underline-offset:4px}
+.c-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+.contacts .btn-main{background:var(--on-cocoa);color:var(--cocoa)}
+.contacts .btn-main:hover{background:color-mix(in srgb,var(--on-cocoa) 88%,var(--cocoa))}
+.contacts .btn-line{border-color:var(--on-cocoa);color:var(--on-cocoa)}
+.contacts .btn-line:hover{background:var(--on-cocoa);color:var(--cocoa)}
+footer{background:var(--cocoa);color:color-mix(in srgb,var(--on-cocoa) 72%,transparent);font-size:13.5px}
+footer .wrap{display:grid;gap:18px;padding-block:26px 30px;border-top:1px solid color-mix(in srgb,var(--on-cocoa) 22%,transparent)}
+footer .logo{font-size:18px;color:var(--on-cocoa)}
+.f-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;align-items:baseline}
+.f-links{display:flex;flex-wrap:wrap;gap:8px 22px}
+.f-links a,.f-links button{color:var(--on-cocoa);text-underline-offset:3px;font:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.f-legal{max-width:72ch;line-height:1.55}
+.f-legal .fill{background:color-mix(in srgb,var(--on-cocoa) 18%,transparent);color:var(--on-cocoa);padding:0 4px;border-radius:3px}
+
+/* cookie banner */
+.ck{position:fixed;z-index:70;left:max(12px,env(safe-area-inset-left,0px));right:max(12px,env(safe-area-inset-right,0px));bottom:calc(84px + env(safe-area-inset-bottom,0px));max-width:560px;margin-left:auto;background:var(--paper);color:var(--ink);border:1px solid var(--line);box-shadow:0 18px 50px -20px rgba(43,33,28,.45);padding:18px 18px 16px;border-radius:6px;display:grid;gap:12px;font-size:14.5px;line-height:1.5}
+@media (min-width:860px){.ck{bottom:calc(20px + env(safe-area-inset-bottom,0px));right:max(20px,env(safe-area-inset-right,0px))}}
+.ck p{margin:0;color:var(--muted)}
+.ck p b{color:var(--ink);font-weight:500}
+.ck-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ck .btn{min-height:44px;padding:0 12px;font-size:14.5px}
+.ck a{color:var(--cocoa)}
+.ck[hidden],[hidden]{display:none!important}
+
+/* mobile bar */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:55;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:var(--bg);border-top:1px solid var(--line)}
+.dock .btn{min-height:48px;padding:0 12px}
+@media (min-width:860px){.dock{display:none}}
+
+/* мягкое появление: элементы видимы всегда */
+.rv.in{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes up{from{transform:translateY(16px);opacity:.3}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Sugar Lab</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#methods">Методы</a>
+      <a href="#zones">Зоны</a>
+      <a href="#prices">Цены</a>
+      <a href="#team">Мастера</a>
+      <a href="#school">Обучение</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="top-right">
+      <span class="top-phone num">+7 999 563-11-19</span>
+      <a class="btn btn-main" href="https://n70828.yclients.com/company/85749/personal/menu?o=" target="_blank" rel="noopener">Записаться</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="where">Екатеринбург, ул. Луначарского, 133 · рядом с ТЦ «Сити-Центр»</p>
+      <h1>Электроэпиляция в&nbsp;Екатеринбурге</h1>
+      <p class="sub"><b>Удаляем волосы навсегда.</b> Работаем с любым цветом волос, на татуировках и при вросших волосах. Также делаем лазерную эпиляцию, шугаринг и воск.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="https://n70828.yclients.com/company/85749/personal/menu?o=" target="_blank" rel="noopener">Записаться онлайн</a>
+        <a class="btn btn-line" href="https://t.me/sugar_lab" target="_blank" rel="noopener">Бесплатная консультация</a>
+      </div>
+      <div class="stats">
+        <div><b>5,0</b><span>рейтинг в 2ГИС, 98 оценок</span></div>
+        <div><b>550+</b><span>отзывов о мастерах</span></div>
+        <div><b>2</b><span>призёра чемпионата по электро</span></div>
+      </div>
+    </div>
+    <figure class="hero-photo rv" style="margin:0">
+      <img src="img/master.jpg" width="800" height="800" alt="Мастер Sugar Lab с зондом для электроэпиляции">
+    </figure>
+  </div>
+</section>
+
+<div class="band" aria-label="Предложения для новых клиентов">
+  <div class="wrap">
+    <div class="offer"><b class="num">3 000 ₽</b><p><strong>Подмышки электроэпиляцией под ключ</strong>Для новых клиентов. Фиксированная цена, сколько бы минут ни ушло. Иголочка включена.</p></div>
+    <div class="offer"><b class="num">4 000 ₽</b><p><strong>100 минут электро вместо 5 500 ₽</strong>Знакомство с топ-мастером Софьей. Любая зона тела, кроме лица.</p></div>
+  </div>
+</div>
+
+<section id="methods">
+  <div class="wrap">
+    <div class="intro rv">
+      <h2>Какой метод выбрать</h2>
+      <p>В студии есть все четыре метода, поэтому мы советуем тот, что подходит вашей коже и задаче. Окончательно метод подбирают на бесплатной консультации.</p>
+    </div>
+    <div class="methods rv">
+      <table>
+        <thead><tr><td></td><th scope="col">Электро<span>от 55 ₽ за минуту</span></th><th scope="col">Лазер<span>первый визит −50%</span></th><th scope="col">Шугаринг и воск<span>от 500 ₽</span></th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Результат</th><td class="best"><span class="y">Навсегда.</span> Удалённый волос не вырастет</td><td>Сильно сокращает рост</td><td>Гладкая кожа на 3–4 недели</td></tr>
+          <tr><th scope="row">Светлые, рыжие, седые волосы</th><td class="best"><span class="y">Да</span></td><td>Работает плохо</td><td>Да</td></tr>
+          <tr><th scope="row">Зона с татуировкой</th><td class="best"><span class="y">Безопасно</span>, рисунок не страдает</td><td>Нельзя, риск ожога</td><td>Да</td></tr>
+          <tr><th scope="row">Вросшие волосы</th><td class="best"><span class="y">Решает проблему</span></td><td>Помогает</td><td>Могут появляться</td></tr>
+          <tr><th scope="row">Как проходит</th><td>Курс около 1,5 лет, визиты всё реже</td><td>Курс сеансов</td><td>Один визит</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="4"><a class="link" href="#prices">Смотреть все цены</a></td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="zones" style="padding-top:0">
+  <div class="wrap">
+    <div class="intro rv">
+      <h2>Цены по зонам</h2>
+      <p>Нажмите на зону, и вы увидите, какими методами её можно обработать и сколько это стоит.</p>
+    </div>
+    <div class="zones">
+      <div class="bm-stage">
+        <div class="view-toggle" role="group" aria-label="Сторона">
+          <button type="button" id="vFront" aria-pressed="true">Спереди</button>
+          <button type="button" id="vBack" aria-pressed="false">Сзади</button>
+        </div>
+        <svg id="bmSvg" viewBox="-160 0 760 1000" role="group" aria-label="Фигура с зонами эпиляции">
+          <defs>
+            <mask id="mFront" maskUnits="userSpaceOnUse" x="0" y="0" width="440" height="990"><image href="img/maskFront.png" x="0" y="0" width="440" height="990"/></mask>
+            <mask id="mBack" maskUnits="userSpaceOnUse" x="0" y="0" width="440" height="990"><image href="img/maskBack.png" x="0" y="0" width="440" height="990"/></mask>
+          </defs>
+          <g id="figure">
+            <image id="bodyImg" href="img/front.webp" x="0" y="0" width="440" height="990"/>
+            <g id="fillLayer" mask="url(#mFront)"></g>
+            <g id="hotspots"></g>
+          </g>
+        </svg>
+        <p class="bm-hint">Подмышки, бикини и голени — самые частые зоны</p>
+      </div>
+      <div class="zpanel" id="zpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap result-grid">
+    <div class="photos2 rv">
+      <figure><img src="img/result-armpit.jpg" width="800" height="800" alt="Подмышка: результат электроэпиляции от первого визита до 1 года и 3 месяцев" loading="lazy"><figcaption>Подмышки: 3 месяца → 1 год и 3 месяца</figcaption></figure>
+      <figure><img src="img/result-tattoo.jpg" width="579" height="548" alt="Рука с татуировкой до и после электроэпиляции" loading="lazy"><figcaption>Татуировка: волосы удалены, рисунок цел</figcaption></figure>
+    </div>
+    <div class="rv">
+      <h2>Как идёт курс</h2>
+      <p class="muted" style="margin-top:14px;max-width:34em">Волосы растут волнами, поэтому курс занимает время. Если знать, чего ждать, проще дойти до результата.</p>
+      <ol class="steps">
+        <li><b>Консультация</b><p>Бесплатно. Мастер смотрит кожу и волосы и называет примерное время на зону.</p></li>
+        <li><b>Первые месяцы</b><p>Удаляем всё, что над кожей. Каждый удалённый волос больше не вырастет.</p></li>
+        <li><b>5–7 месяц</b><p>Скачок роста: просыпаются «спящие» волосы. Это нормально, после него объём резко падает.</p></li>
+        <li><b>Около 1,5 лет</b><p>Остаются единичные волоски, визиты короче и реже.</p></li>
+      </ol>
+      <p class="note">Чтобы не затягивать курс: не выщипывайте волосы между визитами, используйте SPF и неделю после процедуры обходите бассейн и баню.</p>
+    </div>
+  </div>
+</section>
+
+<section class="prices-wrap" id="prices">
+  <div class="wrap">
+    <div class="intro rv">
+      <h2>Цены</h2>
+      <p>Прайс из онлайн-записи студии, октябрь 2026.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Категории услуг">
+      <button class="tab" role="tab" id="tab-electro" aria-selected="true" aria-controls="panel-prices" data-k="electro">Электроэпиляция</button>
+      <button class="tab" role="tab" id="tab-laser" aria-selected="false" aria-controls="panel-prices" data-k="laser">Лазер</button>
+      <button class="tab" role="tab" id="tab-sugar" aria-selected="false" aria-controls="panel-prices" data-k="sugar">Шугаринг</button>
+      <button class="tab" role="tab" id="tab-wax" aria-selected="false" aria-controls="panel-prices" data-k="wax">Воск</button>
+      <button class="tab" role="tab" id="tab-lash" aria-selected="false" aria-controls="panel-prices" data-k="lash">Ресницы</button>
+    </div>
+    <div id="panel-prices" role="tabpanel" aria-labelledby="tab-electro">
+      <p class="price-note" id="price-note"></p>
+      <div class="table-scroll"><table class="ptable"><thead id="price-head"></thead><tbody id="price-body"></tbody></table></div>
+    </div>
+
+    <form class="calc rv" id="calc" onsubmit="return false">
+      <div>
+        <h3>Сколько стоит сеанс электро</h3>
+        <p class="muted" style="font-size:15px;margin-bottom:16px">Время зависит от зоны и густоты волос, точно его скажет мастер.</p>
+        <div class="calc-fields">
+          <div class="calc-row"><label for="minutes">Длительность</label><output id="min-out" class="num">60 минут</output></div>
+          <input type="range" id="minutes" min="15" max="150" step="5" value="60">
+          <label for="tier" class="calc-row" style="margin-top:4px">Мастер</label>
+          <select id="tier">
+            <option value="55">Топ-мастер · 55 ₽ за минуту</option>
+            <option value="65">Премиум-мастер · 65 ₽ за минуту</option>
+            <option value="100">В 4 руки, топ-мастера · 100 ₽ за минуту</option>
+            <option value="118">В 4 руки, премиум · 118 ₽ за минуту</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-out">
+        <small>Примерно за сеанс</small>
+        <b class="num" id="sum">3 300 ₽</b>
+        <small id="sum-note">Минимальная стоимость 1 050 ₽. Одноразовый зонд оплачивается отдельно.</small>
+      </div>
+    </form>
+
+    <div class="prices-foot">
+      <span>Есть противопоказания, нужна консультация специалиста.</span>
+      <a class="btn btn-main" href="https://n70828.yclients.com/company/85749/personal/menu?o=" target="_blank" rel="noopener">Выбрать услугу и время</a>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap team-grid">
+    <figure class="team-photo rv" style="margin:0">
+      <img src="img/team.jpg" width="684" height="800" alt="Мастера Sugar Lab" loading="lazy">
+    </figure>
+    <div>
+      <div class="intro rv" style="margin-bottom:28px">
+        <h2>Мастера</h2>
+        <p>У трёх из четырёх мастеров медицинское образование. Каждый проходит аттестацию.</p>
+      </div>
+      <ul class="masters">
+        <li class="rv"><div><h3>Юлия</h3><span class="tier">Премиум-мастер · электро, лазер, воск</span></div><div class="rev num">223 отзыва<a class="link" href="https://n70828.yclients.com/company/85749/personal/select-master?o=" target="_blank" rel="noopener">Записаться</a></div><p>Медицинское образование, призёр чемпионата по электроэпиляции. Преподаёт в учебном центре студии.</p></li>
+        <li class="rv"><div><h3>Наталья</h3><span class="tier">Премиум-мастер · электро, шугаринг</span></div><div class="rev num">270 отзывов<a class="link" href="https://n70828.yclients.com/company/85749/personal/select-master?o=" target="_blank" rel="noopener">Записаться</a></div><p>Больше всех отзывов в студии. Удобно, если чередуете электро и сахар.</p></li>
+        <li class="rv"><div><h3>Алёна</h3><span class="tier">Топ-мастер · электро, лазер, воск</span></div><div class="rev num">46 отзывов<a class="link" href="https://n70828.yclients.com/company/85749/personal/select-master?o=" target="_blank" rel="noopener">Записаться</a></div><p>Медицинское образование, в прошлом тату-мастер. К ней идут удалять волосы на татуировках.</p></li>
+        <li class="rv"><div><h3>Софья</h3><span class="tier">Топ-мастер · электро, лазер</span></div><div class="rev num">20 отзывов<a class="link" href="https://n70828.yclients.com/company/85749/personal/select-master?o=" target="_blank" rel="noopener">Записаться</a></div><p>Медицинское образование, серебряный призёр чемпионата по электроэпиляции. Ведёт акции для новых клиентов.</p></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="quotes">
+      <figure class="rv"><blockquote>«После длительного перерыва — максимально комфортное знакомство и отличная работа Алёны»</blockquote><figcaption>Дарья, июнь 2026</figcaption></figure>
+      <figure class="rv"><blockquote>«Юлечка очень приятный мастер, делает всё быстро и аккуратно»</blockquote><figcaption>Алиса, апрель 2026</figcaption></figure>
+      <figure class="rv"><blockquote>«Хожу полгода на электроэпиляцию, довольна абсолютно всем»</blockquote><figcaption>Клиентка студии</figcaption></figure>
+    </div>
+    <p style="margin-top:28px"><a class="link" href="https://2gis.ru/ekaterinburg/search/Sugar%20lab%20%D0%9B%D1%83%D0%BD%D0%B0%D1%87%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20133" target="_blank" rel="noopener">Все отзывы в 2ГИС</a></p>
+  </div>
+</section>
+
+<section style="padding-top:0" aria-label="Фото из студии">
+  <div class="wrap">
+    <div class="gallery">
+      <figure class="rv"><img src="img/procedure.jpg" width="642" height="800" alt="Мастер проводит электроэпиляцию под лампой-лупой" loading="lazy"></figure>
+      <figure class="rv"><img src="img/session.jpg" width="800" height="800" alt="Процедура в кабинете студии" loading="lazy"></figure>
+      <figure class="rv"><img src="img/award.jpg" width="599" height="800" alt="Мастера с наградами чемпионата" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="prices-wrap" id="school">
+  <div class="wrap school-grid">
+    <div class="block rv">
+      <img class="school-photo" src="img/school.jpg" width="617" height="800" alt="Практика электроэпиляции на модели" loading="lazy">
+      <h3>Обучение электроэпиляции</h3>
+      <p>Курсы ведёт Юлия, призёр чемпионата. Можно начать с одного дня и понять, подходит ли вам профессия. Для работы электрологом нужно медицинское образование.</p>
+      <div class="rows">
+        <div><span>Знакомство с профессией<small>1 день: теория и практика на моделях</small></span><span>11 990 ₽</span></div>
+        <div><span>Базовый курс<small>после пробного дня доплачиваете разницу</small></span><span>35 000 ₽</span></div>
+        <div><span>Углублённый курс<small>после пробного дня доплачиваете разницу</small></span><span>50 000 ₽</span></div>
+      </div>
+      <a class="btn btn-line" href="https://t.me/sugar_lab" target="_blank" rel="noopener">Узнать даты</a>
+    </div>
+    <div class="block rv">
+      <h3>Нужны модели</h3>
+      <p>Бесплатная электроэпиляция. Процедуры проводят ученики под руководством премиум-мастера Юлии, сеанс около двух часов.</p>
+      <div class="rows">
+        <div><span>21 октября</span><span>10:00 · подмышки</span></div>
+        <div><span>22 октября</span><span>10:00 · подмышки</span></div>
+        <div><span>25 октября</span><span>10:00 · бёдра, 12:00 · бикини</span></div>
+        <div><span>13 ноября</span><span>14:00 · голени, 16:00 · подмышки, 18:00 · бикини</span></div>
+        <div><span>14 ноября</span><span>10:00 · бикини</span></div>
+      </div>
+      <p class="muted" style="font-size:13.5px;margin-top:12px">Новые даты публикуем в Telegram-канале студии.</p>
+      <a class="btn btn-main" href="https://t.me/sugar_lab" target="_blank" rel="noopener">Записаться моделью</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="intro rv"><h2>Вопросы</h2></div>
+    <div class="faq">
+      <details><summary>Почему электроэпиляция удаляет волосы навсегда?</summary><p>Большинство методов действуют на сам волос, а корень остаётся живым. При электроэпиляции стерильный зонд вводится в фолликул, импульс разрушает корень, и этот волос больше не растёт.</p></details>
+      <details><summary>Зачем в студии лазер, если вы за электро?</summary><p>Чтобы подбирать метод честно. Лазер хорош на тёмных волосах и больших зонах, электро нужен для светлых и седых волос, татуировок и результата навсегда. Часто их сочетают.</p></details>
+      <details><summary>Через полгода волос стало больше. Не работает?</summary><p>Это скачок роста на 5–7 месяце, он бывает почти у всех. Сразу после него объём волос резко снижается. Особенно заметно у тех, кто раньше пользовался эпилятором.</p></details>
+      <details><summary>Что делать с вросшими волосами?</summary><p>Убрать причину: частое бритьё, неподходящий воск или сахар, сухую кожу. Помогают энзимная пудра 2–3 раза в неделю и увлажняющий крем. Электроэпиляция решает проблему полностью.</p></details>
+      <details><summary>Сколько стоит консультация?</summary><p>Консультация по электроэпиляции бесплатная. Запишитесь онлайн или напишите администратору в Telegram @sugar_lab.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="wrap">
+    <div class="intro rv"><h2>Контакты</h2><p>Быстрее всего записаться онлайн. С вопросами пишите администратору в Telegram.</p></div>
+    <div class="c-grid">
+      <div class="c-item"><small>Адрес</small><span class="big">Екатеринбург, ул.&nbsp;Луначарского,&nbsp;133</span><span class="muted">рядом с ТЦ «Сити-Центр»</span>
+        <div class="c-links"><a href="https://yandex.ru/maps/?text=%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%9B%D1%83%D0%BD%D0%B0%D1%87%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20133" target="_blank" rel="noopener">Яндекс Карты</a><a href="https://2gis.ru/ekaterinburg/search/Sugar%20lab%20%D0%9B%D1%83%D0%BD%D0%B0%D1%87%D0%B0%D1%80%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20133" target="_blank" rel="noopener">2ГИС</a></div></div>
+      <div class="c-item"><small>Телефон</small><span class="big num">+7 999 563-11-19</span><button class="copy" type="button" data-copy="+79995631119">Скопировать номер</button></div>
+      <div class="c-item"><small>Telegram для записи</small><span class="big">@sugar_lab</span>
+        <div class="c-links"><a href="https://t.me/sugar_lab_ekb" target="_blank" rel="noopener">Канал</a><a href="https://vk.ru/sugar_lab_ekb" target="_blank" rel="noopener">ВКонтакте</a><a href="https://www.instagram.com/sugar_lab_ekb" target="_blank" rel="noopener">Instagram</a><a href="https://max.ru/join/6FVUNLF5kcL5wlHT8ErpgLeMVZqEk98iZJQ7VKbcXJs" target="_blank" rel="noopener">MAX</a></div></div>
+    </div>
+    <div class="c-cta">
+      <a class="btn btn-main" href="https://n70828.yclients.com/company/85749/personal/menu?o=" target="_blank" rel="noopener">Записаться онлайн</a>
+      <a class="btn btn-line" href="https://t.me/sugar_lab" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <span class="logo">Sugar Lab</span>
+      <nav class="f-links" aria-label="Правовые документы">
+        <a href="privacy.html">Политика обработки персональных данных</a>
+        <a href="consent.html">Согласие на обработку данных</a>
+        <a href="cookies.html">Политика cookie</a>
+        <a href="terms.html">Правовая информация</a>
+        <button type="button" id="ck-open">Настройки cookie</button>
+      </nav>
+    </div>
+    <p class="f-legal">Информация на сайте носит справочный характер и не является публичной офертой (п. 2 ст. 437 ГК РФ). Актуальные цены и условия акций уточняйте при записи. Имеются противопоказания, необходима консультация специалиста.</p>
+    <p class="f-legal"><span class="fill">[ИП Фамилия Имя Отчество]</span>, ИНН <span class="fill">[ИНН]</span>, ОГРНИП <span class="fill">[ОГРНИП]</span> · Екатеринбург, ул. Луначарского, 133 · +7 999 563-11-19</p>
+  </div>
+</footer>
+
+<div class="ck" id="ck" role="dialog" aria-labelledby="ck-t" hidden>
+  <p id="ck-t"><b>Мы используем cookie.</b> Необходимые нужны для работы сайта. Аналитические (Яндекс Метрика) включаем только с вашего согласия. Оператор — <span>студия Sugar Lab</span>. <a href="cookies.html">Политика cookie</a></p>
+  <div class="ck-btns">
+    <button type="button" class="btn btn-line" id="ck-no">Только необходимые</button>
+    <button type="button" class="btn btn-line" id="ck-yes">Разрешить аналитику</button>
+  </div>
+</div>
+
+<div class="dock">
+  <a class="btn btn-main" href="https://n70828.yclients.com/company/85749/personal/menu?o=" target="_blank" rel="noopener">Записаться</a>
+  <a class="btn btn-line" href="https://t.me/sugar_lab" target="_blank" rel="noopener">Telegram</a>
+</div>
+
+<script>
+(function(){
+  const fmt = n => n.toLocaleString("ru-RU").replace(/ /g," ") + " ₽";
+
+  /* калькулятор */
+  const mins = document.getElementById("minutes"), tier = document.getElementById("tier");
+  function calc(){
+    const m = +mins.value, rate = +tier.value, four = rate >= 100;
+    const sum = Math.max(1050, m * rate);
+    document.getElementById("min-out").textContent = m + " минут";
+    document.getElementById("sum").textContent = fmt(sum);
+    document.getElementById("sum-note").textContent = four
+      ? `Работают два мастера одновременно, поэтому сеанс идёт быстрее. ${rate} ₽ × ${m} мин. Зонд оплачивается отдельно.`
+      : `${rate} ₽ × ${m} мин. Минимальная стоимость 1 050 ₽. Зонд оплачивается отдельно.` + (rate===55 && m>=80 && m<=110 ? " Новым клиентам выгоднее акция: 100 минут за 4 000 ₽." : "");
+  }
+  mins.addEventListener("input", calc); tier.addEventListener("change", calc); calc();
+
+  /* карта зон */
+  const BOOK = "https://n70828.yclients.com/company/85749/personal/menu?o=";
+  const EL = ["Электроэпиляция","поминутно, 55–65 ₽/мин","Сеанс от 1 050 ₽. Время на зону назовут на бесплатной консультации."];
+  const VIEWS = {
+    front:{img:"img/front.webp",mask:"url(#mFront)",zones:[
+      {id:"face",t:"Лицо",x:222,y:142,side:"r",ly:142,fill:[[222,140,28,20]],
+        sub:"Верхняя губа, подбородок, бакенбарды. Для результата навсегда на лице выбирают электро: лазер на светлых пушковых волосах работает плохо.",
+        rows:[["Электроэпиляция лица","60–70 ₽/мин","Топ-мастер 60 ₽, премиум 70 ₽ за минуту",1],["Шугаринг: губа или подбородок","680 ₽"],["Шугаринг: лицо полностью","1 000 ₽"],["Воск: губа или подбородок","680–720 ₽"]]},
+      {id:"armpits",t:"Подмышки",x:150,y:262,side:"l",ly:262,fill:[[151,262,13,26],[291,262,13,26]],
+        sub:"Самая популярная зона. Новым клиентам электро подмышек под ключ за фиксированную цену.",
+        rows:[["Электроэпиляция под ключ","3 000 ₽","Новым клиентам, сколько бы минут ни ушло, иголочка включена",1],["Лазер","1 250 ₽","",0,"625 ₽"],["Шугаринг","800 ₽"],["Воск","до 800 ₽"]]},
+      {id:"arms",t:"Руки",x:332,y:372,side:"r",ly:372,fill:[[106,365,20,95],[334,365,20,95]],
+        sub:"Руки полностью или до локтя.",
+        rows:[EL.concat([1]),["Лазер: руки полностью","1 900 ₽","",0,"950 ₽"],["Шугаринг: руки полностью","1 900 ₽"],["Шугаринг: до локтя","1 700 ₽"],["Воск: руки","1 900 ₽"]]},
+      {id:"belly",t:"Живот",x:222,y:372,side:"l",ly:372,fill:[[222,372,58,26]],
+        sub:"Полоска на животе входит в глубокое бикини. Живот целиком обрабатывают отдельно.",
+        rows:[EL.concat([1]),["Лазер: полоска на животе","690 ₽"],["Лазер: живот","1 790 ₽","",0,"895 ₽"],["Шугаринг: живот","1 300 ₽"]]},
+      {id:"bikini",t:"Бикини",x:222,y:505,side:"r",ly:505,fill:[[222,498,56,40]],
+        sub:"Классическое, среднее или глубокое. Электро подходит и для бикини с татуировкой.",
+        rows:[EL.concat([1]),["Лазер: бикини тотальное","2 150 ₽","",0,"1 075 ₽"],["Лазер: бикини классика","1 200 ₽","",0,"600 ₽"],["Шугаринг: глубокое","2 500 ₽","Дорожка на животе включена"],["Шугаринг: классическое","1 800 ₽"],["Воск: глубокое","до 2 500 ₽"]]},
+      {id:"hips",t:"Бёдра",x:178,y:620,side:"l",ly:620,fill:[[178,615,42,72],[268,615,42,72]],
+        sub:"Бёдра вместе с коленями.",
+        rows:[EL.concat([1]),["Лазер: бёдра с коленями","2 150 ₽","",0,"1 075 ₽"],["Шугаринг","1 700 ₽"],["Воск","1 700 ₽"]]},
+      {id:"shins",t:"Голени",x:282,y:790,side:"r",ly:790,fill:[[160,790,26,82],[284,790,26,82]],
+        sub:"Голени вместе с коленями. Выгоднее брать ноги полностью или комплекс.",
+        rows:[EL.concat([1]),["Лазер: голени с коленями","2 150 ₽","",0,"1 075 ₽"],["Лазер: ноги полностью","3 000 ₽","",0,"1 500 ₽"],["Шугаринг: голени","1 700 ₽"],["Шугаринг: ноги полностью","2 750 ₽"],["Воск: голени","1 700 ₽"]]}
+    ]},
+    back:{img:"img/back.webp",mask:"url(#mBack)",zones:[
+      {id:"nape",t:"Шея и линия роста волос",x:220,y:152,side:"r",ly:152,fill:[[220,150,26,18]],
+        sub:"Аккуратная линия роста волос на шее.",
+        rows:[EL.concat([1]),["Шугаринг: линия роста волос","800 ₽"]]},
+      {id:"back",t:"Спина",x:220,y:250,side:"l",ly:250,fill:[[220,250,72,62]],
+        sub:"Спина целиком или отдельные участки: лопатки, плечи.",
+        rows:[EL.concat([1]),["Лазер: спина","1 790 ₽","",0,"895 ₽"],["Шугаринг: спина","2 000 ₽"]]},
+      {id:"lower",t:"Поясница",x:220,y:378,side:"r",ly:378,fill:[[220,380,60,26]],
+        sub:"Небольшая зона, обычно её делают вместе со спиной или ягодицами.",
+        rows:[EL.concat([1]),["Лазер: поясница","1 200 ₽","",0,"600 ₽"],["Шугаринг: поясница","1 300 ₽"]]},
+      {id:"glutes",t:"Ягодицы",x:172,y:492,side:"l",ly:492,fill:[[174,492,48,48],[266,492,48,48]],
+        sub:"Ягодицы и межъягодичная зона.",
+        rows:[EL.concat([1]),["Лазер: ягодицы","1 200 ₽","",0,"600 ₽"],["Шугаринг","800 ₽"],["Воск","800 ₽"]]},
+      {id:"legsback",t:"Ноги",x:270,y:760,side:"r",ly:760,fill:[[176,640,40,80],[264,640,40,80],[170,800,26,78],[270,800,26,78]],
+        sub:"Ноги полностью: бёдра, колени и голени.",
+        rows:[EL.concat([1]),["Лазер: ноги полностью","3 000 ₽","",0,"1 500 ₽"],["Шугаринг: ноги полностью","2 750 ₽"],["Воск: ноги полностью","2 750 ₽"]]}
+    ]}
+  };
+  const NS = "http://www.w3.org/2000/svg";
+  const mk = (tag, a) => { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); return e; };
+  const zs = { view:"front", zone:"armpits" };
+  const hsL = document.getElementById("hotspots"), fillL = document.getElementById("fillLayer"), zp = document.getElementById("zpanel");
+  const escH = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  function drawZones(){
+    const V = VIEWS[zs.view];
+    document.getElementById("bodyImg").setAttribute("href", V.img);
+    fillL.setAttribute("mask", V.mask);
+    hsL.innerHTML = "";
+    V.zones.forEach(z => {
+      const g = mk("g", {class:"hs", tabindex:"0", role:"button", "aria-label":z.t, "data-z":z.id});
+      const lx = z.side === "l" ? -12 : 452;
+      g.append(mk("line", {class:"lead", x1:z.x, y1:z.y, x2:lx, y2:z.ly}));
+      const t = mk("text", {x: z.side === "l" ? -20 : 460, y: z.ly + 7, "text-anchor": z.side === "l" ? "end" : "start"}); t.textContent = z.t; g.append(t);
+      g.append(mk("circle", {class:"hit", cx:z.x, cy:z.y, r:38}), mk("circle", {class:"dot", cx:z.x, cy:z.y, r:10}));
+      const act = () => selectZone(z.id);
+      g.addEventListener("click", act);
+      g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); act(); } });
+      hsL.append(g);
+    });
+    if (!V.zones.some(z => z.id === zs.zone)) zs.zone = V.zones[1] ? V.zones[1].id : V.zones[0].id;
+    selectZone(zs.zone, true);
+  }
+  function selectZone(id, quiet){
+    zs.zone = id;
+    const z = VIEWS[zs.view].zones.find(x => x.id === id);
+    hsL.querySelectorAll(".hs").forEach(g => { const on = g.dataset.z === id; g.classList.toggle("on", on); g.setAttribute("aria-pressed", String(on)); });
+    fillL.innerHTML = "";
+    z.fill.forEach(([x,y,rx,ry]) => fillL.append(mk("ellipse", {class:"zfill", cx:x, cy:y, rx:rx, ry:ry})));
+    zp.innerHTML = `<div class="zname">${escH(z.t)}</div><p class="zsub">${escH(z.sub)}</p><div class="zlist">` +
+      z.rows.map(r => `<div class="zrow${r[3] ? " top" : ""}"><b>${escH(r[0])}</b><span class="p">${escH(r[1])}${r[4] ? `<span class="first">${escH(r[4])} первый визит</span>` : ""}</span>${r[2] ? `<small>${escH(r[2])}</small>` : ""}</div>`).join("") +
+      `</div><a class="btn btn-main" href="${BOOK}" target="_blank" rel="noopener">Записаться: ${escH(z.t.toLowerCase())}</a>`;
+    if (!quiet) { zp.classList.remove("fade"); void zp.offsetWidth; zp.classList.add("fade"); }
+  }
+  const fig = document.getElementById("figure");
+  function setView(v){
+    if (v === zs.view) return;
+    document.getElementById("vFront").setAttribute("aria-pressed", String(v === "front"));
+    document.getElementById("vBack").setAttribute("aria-pressed", String(v === "back"));
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { zs.view = v; drawZones(); return; }
+    fig.classList.add("swap");
+    setTimeout(() => { zs.view = v; drawZones(); fig.classList.remove("swap"); }, 250);
+  }
+  document.getElementById("vFront").addEventListener("click", () => setView("front"));
+  document.getElementById("vBack").addEventListener("click", () => setView("back"));
+  drawZones();
+
+  /* прайс */
+  const P = {
+    electro:{note:"<b>Электроэпиляция считается поминутно.</b> Топ-мастер 55 ₽, премиум-мастер 65 ₽ за минуту. Минимальная стоимость процедуры 1 050 ₽ плюс одноразовый зонд.",
+      head:["Услуга","Цена"],
+      rows:[["Консультация по электроэпиляции","Бесплатно","1 час"],["Подмышки под ключ, новым клиентам","3 000 ₽","Фиксированная цена, иголочка включена"],["100 минут, новым клиентам","4 000 ₽","Вместо 5 500 ₽, любая зона, кроме лица"],["Электроэпиляция до 30 минут","1 050 ₽","Минимальная стоимость"],["Электроэпиляция поминутно","55–65 ₽/мин","Сеансы до 45, 70, 90 и 150 минут"],["В 4 руки, до 90 или 150 минут","100–118 ₽/мин","Два мастера одновременно"],["SPA для рук во время электро","450 ₽","Отшелушивание и SMART-маска"],["SPA для ног во время электро","450 ₽","Отшелушивание и SMART-маска"]]},
+    laser:{note:"<b>Первый визит на лазер за полцены.</b> Цена в последней колонке действует один раз.",
+      head:["Зона","Цена","Первый визит"],
+      rows:[["Всё тело, all inclusive","7 500 ₽","3 750 ₽","Подмышки, ноги, бикини, руки, средняя и 2 малые зоны"],["Комплекс premium","5 450 ₽","2 725 ₽","Подмышки, бикини, ноги и руки полностью"],["Комплекс standart","4 750 ₽","2 375 ₽","Подмышки, бикини, ноги полностью"],["Комплекс medium","4 000 ₽","2 000 ₽","Подмышки, бикини, голени"],["Комплекс mini","2 950 ₽","1 475 ₽","Бикини и подмышки"],["Ноги полностью","3 000 ₽","1 500 ₽"],["Бикини тотальное","2 150 ₽","1 075 ₽"],["Голени с коленями","2 150 ₽","1 075 ₽"],["Бёдра с коленями","2 150 ₽","1 075 ₽"],["Руки полностью","1 900 ₽","950 ₽"],["Большая зона","1 790 ₽","895 ₽","Руки до или выше локтя, живот, спина, декольте, плечи, ягодицы"],["Подмышки","1 250 ₽","625 ₽"],["Средняя зона","1 200 ₽","600 ₽","Грудь, поясница, ягодицы, бикини классика"],["Малая зона","690 ₽","—","Полоска на животе, ареолы, пальцы"]]},
+    sugar:{note:"<b>Шугаринг натуральной сахарной пастой.</b> Комплексы выгоднее отдельных зон.",
+      head:["Зона","Цена"],
+      rows:[["Глубокое бикини + подмышки","2 950 ₽","Комплекс"],["Глубокое бикини + голени + подмышки","4 000 ₽","Комплекс"],["Глубокое бикини + ноги полностью + подмышки","4 750 ₽","Самый популярный комплекс"],["Руки + глубокое бикини + ноги + подмышки","5 450 ₽","Самый полный комплекс"],["Бикини глубокое","2 500 ₽","Дорожка на животе включена"],["Бикини среднее","2 000 ₽"],["Бикини классическое","1 800 ₽"],["Ноги полностью","2 750 ₽"],["Голени с коленями","1 700 ₽"],["Бёдра с коленями","1 700 ₽"],["Руки полностью","1 900 ₽"],["Руки до локтя","1 700 ₽"],["Спина","2 000 ₽"],["Поясница","1 300 ₽"],["Живот","1 300 ₽"],["Подмышки","800 ₽"],["Ягодицы","800 ₽"],["Лицо полностью","1 000 ₽"],["Линия роста волос","800 ₽"],["Губа или подбородок","680 ₽"],["Бакенбарды","600 ₽"],["Ареолы","500 ₽"]]},
+    wax:{note:"<b>Воск</b> подходит тем, кому не подошёл сахар. Мастер подскажет, что лучше для вашей кожи.",
+      head:["Зона","Цена"],
+      rows:[["Бикини + подмышки, первый визит","2 170 ₽","Для новых клиентов"],["Руки + глубокое бикини + ноги + подмышки","5 450 ₽","Комплекс"],["Глубокое бикини + ноги полностью + подмышки","4 750 ₽","Комплекс"],["Глубокое бикини + голени + подмышки","4 000 ₽","Комплекс"],["Глубокое бикини + подмышки","2 950 ₽","Комплекс"],["Голени + подмышки","2 500 ₽","Комплекс"],["Ноги полностью","2 750 ₽"],["Бикини глубокое","до 2 500 ₽","Дорожка на животе включена"],["Руки","1 900 ₽"],["Бикини классическое","1 800 ₽"],["Голени с коленями","1 700 ₽"],["Бёдра с коленями","1 700 ₽"],["Подмышки","до 800 ₽"],["Ягодицы","800 ₽"],["Лицо: губа или подбородок","680–720 ₽"]]},
+    lash:{note:"<b>Ламинирование ресниц</b>, около 2 часов.",
+      head:["Услуга","Цена"],
+      rows:[["Ламинирование ресниц","2 700 ₽","Без ботокса"],["Ламинирование и ботокс ресниц","3 000 ₽"]]}
+  };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const head = document.getElementById("price-head"), body = document.getElementById("price-body"), note = document.getElementById("price-note"), panel = document.getElementById("panel-prices");
+  function render(k){
+    const d = P[k], cols = d.head.length;
+    note.innerHTML = d.note;
+    head.innerHTML = "<tr>" + d.head.map((h,i)=>`<th scope="col"${i?' class="p"':''}>${esc(h)}</th>`).join("") + "</tr>";
+    body.innerHTML = d.rows.map(r=>{
+      let h = `<td>${esc(r[0])}${r[cols]?`<span class="d">${esc(r[cols])}</span>`:""}</td><td class="p">${esc(r[1])}</td>`;
+      if (cols===3) h += `<td class="p first">${esc(r[2])}</td>`;
+      return `<tr>${h}</tr>`;
+    }).join("");
+    panel.setAttribute("aria-labelledby","tab-"+k);
+  }
+  const tabs = [...document.querySelectorAll(".tab")];
+  function select(t){ tabs.forEach(x=>x.setAttribute("aria-selected", x===t?"true":"false")); render(t.dataset.k); try{localStorage.setItem("sl-tab",t.dataset.k)}catch(e){} }
+  tabs.forEach(t=>t.addEventListener("click",()=>select(t)));
+  document.querySelector(".tabs").addEventListener("keydown",e=>{
+    if(e.key!=="ArrowRight"&&e.key!=="ArrowLeft")return;
+    const i = tabs.findIndex(t=>t.getAttribute("aria-selected")==="true");
+    const n = tabs[(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length]; select(n); n.focus();
+  });
+  let start="electro"; try{const s=localStorage.getItem("sl-tab"); if(s&&P[s]) start=s;}catch(e){}
+  select(tabs.find(t=>t.dataset.k===start));
+
+  /* копирование номера */
+  document.querySelectorAll(".copy").forEach(b=>b.addEventListener("click",()=>{
+    const old=b.textContent, done=t=>{b.textContent=t; setTimeout(()=>b.textContent=old,1600)};
+    const sel=()=>{const el=b.previousElementSibling,r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(b.dataset.copy).then(()=>done("Скопировано")).catch(()=>{sel();done("Выделено")});} else {sel();done("Выделено");}
+  }));
+
+  /* cookie: аналитика загружается только после согласия */
+  const METRIKA_ID = null; // номер счётчика Яндекс Метрики, например 12345678
+  const CK_VER = "2026-10-20";
+  const ck = document.getElementById("ck");
+  function readCk(){ try { const v = JSON.parse(localStorage.getItem("sl-consent")); return v && v.v === CK_VER && Date.now() - v.ts < 365*864e5 ? v : null; } catch(e){ return null; } }
+  function loadMetrika(){
+    if (!METRIKA_ID || window.ym) return;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+    window.ym(METRIKA_ID, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true });
+  }
+  function clearMetrika(){ ["_ym_uid","_ym_d","_ym_isad","_ym_visorc"].forEach(n => { document.cookie = n + "=; Max-Age=0; path=/"; }); }
+  function saveCk(analytics){
+    try { localStorage.setItem("sl-consent", JSON.stringify({ v: CK_VER, ts: Date.now(), analytics })); } catch(e){}
+    ck.hidden = true;
+    if (analytics) loadMetrika(); else clearMetrika();
+  }
+  document.getElementById("ck-yes").addEventListener("click", () => saveCk(true));
+  document.getElementById("ck-no").addEventListener("click", () => saveCk(false));
+  document.getElementById("ck-open").addEventListener("click", () => { ck.hidden = false; document.getElementById("ck-no").focus(); });
+  const prev = readCk();
+  if (!prev) ck.hidden = false; else if (prev.analytics) loadMetrika();
+
+  /* мягкое появление ниже первого экрана */
+  if("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches){
+    const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}}),{threshold:.12});
+    document.querySelectorAll(".rv").forEach(el=>{ if(el.getBoundingClientRect().top>innerHeight) io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
