@@ -73,7 +73,26 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .top-phone{display:none;font-size:15px;font-weight:500;white-space:nowrap}
 .top .btn{min-height:42px;padding:0 18px;font-size:15px}
 @media (min-width:1000px){.nav{display:flex}.top-phone{display:block}}
-@media (max-width:420px){.top .btn{display:none}}
+@media (max-width:420px){.top-right .btn{display:none}}
+.burger{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-8px;border:0;background:transparent;color:var(--ink);cursor:pointer;border-radius:4px}
+.burger span{position:relative;display:block;width:22px;height:1.5px;background:currentColor;transition:background-color .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:22px;height:1.5px;background:currentColor;transition:transform .25s ease}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:translateY(-7px) rotate(-45deg)}
+@media (min-width:1000px){.burger{display:none}}
+.mnav{position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 24px 40px -28px rgba(43,33,28,.45);max-height:calc(100dvh - 68px - env(safe-area-inset-top,0px));overflow-y:auto}
+.mnav[hidden]{display:none}
+.mnav .wrap{display:grid;gap:0;padding-block:8px 22px}
+.mnav a.ml{display:flex;justify-content:space-between;align-items:center;padding:15px 0;border-bottom:1px solid var(--line);font:400 24px/1.2 var(--f-logo);text-decoration:none;color:var(--ink)}
+.mnav a.ml::after{content:"→";font:400 18px var(--f-body);color:var(--muted)}
+.mnav .mfoot{display:grid;gap:10px;margin-top:20px}
+.mnav .mphone{font-size:17px;font-weight:500;color:var(--ink);text-decoration:none}
+.mnav .mfoot .btn{width:100%}
+.mnav.open{animation:navin .25s ease both}
+@keyframes navin{from{opacity:0;transform:translateY(-6px)}}
+@media (min-width:1000px){.mnav{display:none!important}}
 
 /* hero */
 .hero{padding-block:clamp(28px,5vw,64px) clamp(48px,7vw,88px)}
@@ -104,15 +123,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .offer p strong{color:var(--ink);font-weight:500;display:block;font-size:16px;margin-bottom:2px}
 
 /* methods table */
-.methods{overflow-x:auto;border-top:1px solid var(--ink)}
-.methods table{width:100%;min-width:640px;border-collapse:collapse}
-.methods th,.methods td{padding:16px 18px 16px 0;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);font-size:15.5px}
-.methods thead th{font:400 26px/1.1 var(--f-logo);padding-top:20px}
-.methods thead th span{display:block;font:400 14px var(--f-body);color:var(--muted);margin-top:6px}
-.methods tbody th{font-weight:500;color:var(--muted);width:22%}
-.methods td.best{color:var(--ink)}
-.methods td .y{color:var(--ok);font-weight:500}
-.methods tfoot td{border-bottom:0;padding-top:18px}
+.mcards{display:grid;gap:14px;list-style:none;margin:0;padding:0}
+@media (min-width:860px){.mcards{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}}
+.mcard{background:var(--paper);border:1px solid var(--line);padding:20px 18px 6px;min-width:0}
+@media (min-width:860px){.mcard{background:transparent;border:0;border-left:1px solid var(--line);padding:22px 22px 6px}.mcard:first-child{border-left:0;padding-left:0}}
+.mcard.best{border-color:color-mix(in srgb,var(--ok) 45%,var(--line))}
+@media (min-width:860px){.mcard.best{border-color:var(--line)}}
+.mcard h3{font-size:28px}
+.mcard .mprice{display:block;color:var(--muted);font-size:14.5px;margin-top:4px}
+.mcard .badge{display:inline-block;margin-top:10px;font-size:12px;font-weight:500;color:var(--ok);border:1px solid currentColor;border-radius:3px;padding:1px 7px}
+.mcard dl{margin:14px 0 0;display:grid}
+.mcard dl div{display:grid;gap:2px;padding:12px 0;border-top:1px solid var(--line)}
+.mcard dt{font-size:13px;color:var(--muted)}
+.mcard dd{margin:0;font-size:15.5px}
+.mcard dd .y{color:var(--ok);font-weight:500}
+.mfoot-link{margin-top:22px}
 
 /* body map */
 .zones{display:grid;gap:clamp(24px,4vw,56px);align-items:start}
@@ -296,8 +321,8 @@ footer .logo{font-size:18px;color:var(--on-cocoa)}
   <div class="wrap">
     <a class="logo" href="#top">Sugar Lab</a>
     <nav class="nav" aria-label="Разделы">
-      <a href="#methods">Методы</a>
       <a href="#zones">Зоны</a>
+      <a href="#methods">Методы</a>
       <a href="#prices">Цены</a>
       <a href="#team">Мастера</a>
       <a href="#school">Обучение</a>
@@ -306,8 +331,25 @@ footer .logo{font-size:18px;color:var(--on-cocoa)}
     <div class="top-right">
       <span class="top-phone num">+7 999 563-11-19</span>
       <a class="btn btn-main" href="https://n70828.yclients.com/company/85749/personal/menu?o=" target="_blank" rel="noopener">Записаться</a>
+      <button type="button" class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav"><span></span></button>
     </div>
   </div>
+  <nav class="mnav" id="mnav" aria-label="Меню" hidden>
+    <div class="wrap">
+      <a class="ml" href="#zones">Цены по зонам</a>
+      <a class="ml" href="#methods">Какой метод выбрать</a>
+      <a class="ml" href="#prices">Прайс</a>
+      <a class="ml" href="#team">Мастера</a>
+      <a class="ml" href="#school">Обучение и модели</a>
+      <a class="ml" href="#faq">Вопросы</a>
+      <a class="ml" href="#contacts">Контакты</a>
+      <div class="mfoot">
+        <a class="mphone num" href="tel:+79995631119">+7 999 563-11-19</a>
+        <a class="btn btn-main" href="https://n70828.yclients.com/company/85749/personal/menu?o=" target="_blank" rel="noopener">Записаться онлайн</a>
+        <a class="btn btn-line" href="https://t.me/sugar_lab" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+    </div>
+  </nav>
 </header>
 
 <main id="top">
@@ -340,29 +382,7 @@ footer .logo{font-size:18px;color:var(--on-cocoa)}
   </div>
 </div>
 
-<section id="methods">
-  <div class="wrap">
-    <div class="intro rv">
-      <h2>Какой метод выбрать</h2>
-      <p>В студии есть все четыре метода, поэтому мы советуем тот, что подходит вашей коже и задаче. Окончательно метод подбирают на бесплатной консультации.</p>
-    </div>
-    <div class="methods rv">
-      <table>
-        <thead><tr><td></td><th scope="col">Электро<span>от 55 ₽ за минуту</span></th><th scope="col">Лазер<span>первый визит −50%</span></th><th scope="col">Шугаринг и воск<span>от 500 ₽</span></th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Результат</th><td class="best"><span class="y">Навсегда.</span> Удалённый волос не вырастет</td><td>Сильно сокращает рост</td><td>Гладкая кожа на 3-4 недели</td></tr>
-          <tr><th scope="row">Светлые, рыжие, седые волосы</th><td class="best"><span class="y">Да</span></td><td>Работает плохо</td><td>Да</td></tr>
-          <tr><th scope="row">Зона с татуировкой</th><td class="best"><span class="y">Безопасно</span>, рисунок не страдает</td><td>Нельзя, риск ожога</td><td>Да</td></tr>
-          <tr><th scope="row">Вросшие волосы</th><td class="best"><span class="y">Решает проблему</span></td><td>Помогает</td><td>Могут появляться</td></tr>
-          <tr><th scope="row">Как проходит</th><td>Курс около 1,5 лет, визиты всё реже</td><td>Курс сеансов</td><td>Один визит</td></tr>
-        </tbody>
-        <tfoot><tr><td colspan="4"><a class="link" href="#prices">Смотреть все цены</a></td></tr></tfoot>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section id="zones" style="padding-top:0">
+<section id="zones">
   <div class="wrap">
     <div class="intro rv">
       <h2>Цены по зонам</h2>
@@ -389,6 +409,48 @@ footer .logo{font-size:18px;color:var(--on-cocoa)}
       </div>
       <div class="zpanel" id="zpanel" aria-live="polite"></div>
     </div>
+  </div>
+</section>
+
+<section id="methods" style="padding-top:0">
+  <div class="wrap">
+    <div class="intro rv">
+      <h2>Какой метод выбрать</h2>
+      <p>В студии есть все четыре метода, поэтому мы советуем тот, что подходит вашей коже и задаче. Окончательно метод подбирают на бесплатной консультации.</p>
+    </div>
+    <ul class="mcards">
+      <li class="mcard best rv">
+        <h3>Электро</h3><span class="mprice">от 55 ₽ за минуту</span><span class="badge">навсегда</span>
+        <dl>
+          <div><dt>Результат</dt><dd><span class="y">Навсегда.</span> Удалённый волос не вырастет</dd></div>
+          <div><dt>Светлые, рыжие, седые волосы</dt><dd><span class="y">Подходит</span></dd></div>
+          <div><dt>Зона с татуировкой</dt><dd><span class="y">Безопасно</span>, рисунок не страдает</dd></div>
+          <div><dt>Вросшие волосы</dt><dd><span class="y">Решает проблему</span></dd></div>
+          <div><dt>Как проходит</dt><dd>Курс около 1,5 лет, визиты всё реже</dd></div>
+        </dl>
+      </li>
+      <li class="mcard rv">
+        <h3>Лазер</h3><span class="mprice">первый визит за полцены</span>
+        <dl>
+          <div><dt>Результат</dt><dd>Сильно сокращает рост</dd></div>
+          <div><dt>Светлые, рыжие, седые волосы</dt><dd>Работает плохо</dd></div>
+          <div><dt>Зона с татуировкой</dt><dd>Нельзя, риск ожога</dd></div>
+          <div><dt>Вросшие волосы</dt><dd>Помогает</dd></div>
+          <div><dt>Как проходит</dt><dd>Курс сеансов</dd></div>
+        </dl>
+      </li>
+      <li class="mcard rv">
+        <h3>Шугаринг и воск</h3><span class="mprice">от 500 ₽</span>
+        <dl>
+          <div><dt>Результат</dt><dd>Гладкая кожа на 3-4 недели</dd></div>
+          <div><dt>Светлые, рыжие, седые волосы</dt><dd>Подходит</dd></div>
+          <div><dt>Зона с татуировкой</dt><dd>Подходит</dd></div>
+          <div><dt>Вросшие волосы</dt><dd>Могут появляться</dd></div>
+          <div><dt>Как проходит</dt><dd>Один визит</dd></div>
+        </dl>
+      </li>
+    </ul>
+    <p class="mfoot-link"><a class="link" href="#prices">Смотреть весь прайс</a></p>
   </div>
 </section>
 
@@ -527,7 +589,7 @@ footer .logo{font-size:18px;color:var(--on-cocoa)}
   </div>
 </section>
 
-<section>
+<section id="faq">
   <div class="wrap">
     <div class="intro rv"><h2>Вопросы</h2></div>
     <div class="faq">
@@ -604,6 +666,19 @@ footer .logo{font-size:18px;color:var(--on-cocoa)}
       : `${rate} ₽ × ${m} мин. Минимальная стоимость 1 050 ₽. Зонд оплачивается отдельно.` + (rate===55 && m>=80 && m<=110 ? " Новым клиентам выгоднее акция: 100 минут за 4 000 ₽." : "");
   }
   mins.addEventListener("input", calc); tier.addEventListener("change", calc); calc();
+
+  /* бургер-меню */
+  const burger = document.getElementById("burger"), mnav = document.getElementById("mnav");
+  function setMenu(open){
+    mnav.hidden = !open; mnav.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
+  }
+  burger.addEventListener("click", () => setMenu(mnav.hidden));
+  mnav.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !mnav.hidden) { setMenu(false); burger.focus(); } });
+  document.addEventListener("click", e => { if (!mnav.hidden && !e.target.closest(".top")) setMenu(false); });
+  matchMedia("(min-width:1000px)").addEventListener("change", e => { if (e.matches) setMenu(false); });
 
   /* карта зон */
   const BOOK = "https://n70828.yclients.com/company/85749/personal/menu?o=";

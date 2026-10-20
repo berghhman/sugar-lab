@@ -48,6 +48,18 @@ table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:560px;backg
 th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
 th{font-weight:600;font-size:13.5px;color:var(--muted)}
 tr:last-child td{border-bottom:0}
+@media (max-width:640px){
+.tbl{border:0;overflow:visible}
+table{min-width:0;background:transparent}
+thead{display:none}
+table,tbody,tr,td{display:block;width:100%}
+tr{background:var(--paper);border:1px solid var(--line);margin-bottom:10px;padding:4px 0}
+td{border-bottom:1px solid var(--line);padding:9px 14px}
+tr td:last-child{border-bottom:0}
+td::before{content:attr(data-label);display:block;font-size:12.5px;color:var(--muted);margin-bottom:2px}
+td:first-child{font-weight:600}
+td:first-child::before{display:none}
+}
 .req{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:0 0 16px;font-size:15px}
 .req dt{color:var(--muted)}
 .req dd{margin:0}
@@ -76,8 +88,8 @@ footer .wrap{padding-block:20px}
 <div class="tbl"><table>
 <thead><tr><th>Название</th><th>Тип</th><th>Зачем</th><th>Срок</th></tr></thead>
 <tbody>
-<tr><td>sl-consent</td><td>localStorage</td><td>Запоминает ваш выбор в баннере cookie</td><td>1 год</td></tr>
-<tr><td>sl-tab</td><td>localStorage</td><td>Запоминает открытую вкладку прайса</td><td>До очистки браузера</td></tr>
+<tr><td data-label="Название">sl-consent</td><td data-label="Тип">localStorage</td><td data-label="Зачем">Запоминает ваш выбор в баннере cookie</td><td data-label="Срок">1 год</td></tr>
+<tr><td data-label="Название">sl-tab</td><td data-label="Тип">localStorage</td><td data-label="Зачем">Запоминает открытую вкладку прайса</td><td data-label="Срок">До очистки браузера</td></tr>
 </tbody></table></div>
 
 <h3>Аналитические - только с вашего согласия</h3>
@@ -85,9 +97,9 @@ footer .wrap{padding-block:20px}
 <div class="tbl"><table>
 <thead><tr><th>Название</th><th>Зачем</th><th>Срок</th></tr></thead>
 <tbody>
-<tr><td>_ym_uid, _ym_d</td><td>Различают посетителей и дату первого визита</td><td>1 год</td></tr>
-<tr><td>_ym_isad</td><td>Определяет наличие блокировщика рекламы</td><td>2 дня</td></tr>
-<tr><td>_ym_visorc</td><td>Позволяет корректно записывать сессию</td><td>30 минут</td></tr>
+<tr><td data-label="Название">_ym_uid, _ym_d</td><td data-label="Зачем">Различают посетителей и дату первого визита</td><td data-label="Срок">1 год</td></tr>
+<tr><td data-label="Название">_ym_isad</td><td data-label="Зачем">Определяет наличие блокировщика рекламы</td><td data-label="Срок">2 дня</td></tr>
+<tr><td data-label="Название">_ym_visorc</td><td data-label="Зачем">Позволяет корректно записывать сессию</td><td data-label="Срок">30 минут</td></tr>
 </tbody></table></div>
 <p>Данные, полученные Яндекс Метрикой, обрабатываются ООО «Яндекс» в соответствии с его <a href="https://yandex.ru/legal/confidential/" target="_blank" rel="noopener">политикой конфиденциальности</a>. Оператор получает только обобщённую статистику.</p>
 
